@@ -12,10 +12,6 @@ class MainActivity : AppCompatActivity() {
         // bzw. das UI der Activity wird dargestellt
         setContentView(R.layout.activity_main)
     }
-
-    private fun myFunction(): String {
-        return "Hello!"
-    }
 }
 
 /* JAVA:
