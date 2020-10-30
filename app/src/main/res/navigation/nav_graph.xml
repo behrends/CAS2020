@@ -15,4 +15,9 @@
         android:name="com.example.cas2020.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.cas2020.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
 </navigation>
