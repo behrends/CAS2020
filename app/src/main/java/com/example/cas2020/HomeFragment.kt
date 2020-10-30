@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -16,16 +17,11 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val detailsButton1 = view.findViewById<Button>(R.id.details1)
-        detailsButton1.setOnClickListener { view: View ->
-            val bundle = bundleOf("itemId" to 1)
-            view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2, bundle)
-        }
-        val detailsButton2 = view.findViewById<Button>(R.id.details2)
-        detailsButton2.setOnClickListener { view: View ->
-            val bundle = bundleOf(Pair("itemId", 2))
-            view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2, bundle)
-        }
+        val list = view.findViewById<RecyclerView>(R.id.itemList)
+//        list.adapter = ItemAdapter()
         return view
     }
 }
+
+//   val bundle = bundleOf("itemId" to 1)
+//   view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2, bundle)
