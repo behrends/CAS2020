@@ -21,7 +21,11 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.cas2020.DetailsFragment"
         android:label="Detailansicht"
-        tools:layout="@layout/fragment_details"/>
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="itemId"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.cas2020.SettingsFragment"
