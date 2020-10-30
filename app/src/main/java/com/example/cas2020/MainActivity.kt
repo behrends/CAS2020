@@ -3,47 +3,22 @@ package com.example.cas2020
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.Switch
-import android.widget.TextView
 import android.widget.Toast
+import com.example.cas2020.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    // onCreate() wird automatisch von Android beim
-    // Starten der Activity aufgerufen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Verbindung zum XML-Layout herstellen
-        // bzw. das UI der Activity wird dargestellt
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val textView = findViewById<TextView>(R.id.textView)
-
-        // Button anklicken soll TextView  ändern
-        // 1. Button-View-Element aus XML einer Konstanten zuweisen
-        val button = findViewById<Button>(R.id.button)
-        // 2. Button mit Klick-Handler ausstatten
-        button.setOnClickListener {
+        binding.button.setOnClickListener {
             Toast.makeText(this, "OK HAT GEKLAPPT!", Toast.LENGTH_LONG).show()
-            textView.text = "WURDE GEÄNDERT"
+            binding.textView.text = "WURDE GEÄNDERT"
         }
 
-        val switch1: Switch = findViewById(R.id.switch1)
-        switch1.setOnCheckedChangeListener { _, isChecked ->
-            textView.visibility = if(isChecked) View.INVISIBLE else View.VISIBLE
+        binding.switch1.setOnCheckedChangeListener { _, isChecked ->
+            binding.textView.visibility = if(isChecked) View.INVISIBLE else View.VISIBLE
         }
     }
 }
-
-/* JAVA:
-public class MainActivity extends AppCompatActivity {
-
-    @override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // Verbindung zum XML-Layout herstellen
-        // bzw. das UI der Activity wird dargestellt
-        setContentView(R.layout.activity_main);
-    }
-}
- */
