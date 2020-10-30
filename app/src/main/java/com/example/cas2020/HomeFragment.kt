@@ -15,9 +15,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val detailsButton = view.findViewById<Button>(R.id.buttonDetails)
-        detailsButton.setOnClickListener { view: View ->
-            // TODO: navigiere zu DetailFragment
+        val detailsButton1 = view.findViewById<Button>(R.id.details1)
+        detailsButton1.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2)
+        }
+        val detailsButton2 = view.findViewById<Button>(R.id.details2)
+        detailsButton2.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2)
         }
         return view

@@ -17,21 +17,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonDetails"
+        android:id="@+id/details1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Go to Details"
+        android:text="Go to Details 1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/buttonSettings"
+        android:id="@+id/details2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Go to Settings"
-        app:layout_constraintStart_toStartOf="@+id/buttonDetails"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDetails" />
+        android:text="Go to Details 2"
+        app:layout_constraintStart_toStartOf="@+id/details1"
+        app:layout_constraintTop_toBottomOf="@+id/details1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
