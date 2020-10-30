@@ -18,10 +18,7 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val list = view.findViewById<RecyclerView>(R.id.itemList)
-//        list.adapter = ItemAdapter()
+        list.adapter = ItemAdapter()
         return view
     }
 }
-
-//   val bundle = bundleOf("itemId" to 1)
-//   view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment2, bundle)
