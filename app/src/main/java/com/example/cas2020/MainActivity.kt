@@ -2,6 +2,8 @@ package com.example.cas2020
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     // onCreate() wird automatisch von Android beim
@@ -11,6 +13,15 @@ class MainActivity : AppCompatActivity() {
         // Verbindung zum XML-Layout herstellen
         // bzw. das UI der Activity wird dargestellt
         setContentView(R.layout.activity_main)
+
+
+        // TODO: Button anklicken soll Info zeigen
+        // 1. Button-View-Element aus XML einer Konstanten zuweisen
+        val button = findViewById<Button>(R.id.button)
+        // 2. Button mit Klick-Handler ausstatten
+        button.setOnClickListener {
+            Toast.makeText(this, "OK HAT GEKLAPPT!", Toast.LENGTH_LONG).show()
+        }
     }
 }
 
