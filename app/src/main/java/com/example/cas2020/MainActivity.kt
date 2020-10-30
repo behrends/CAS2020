@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navController = findNavController(R.id.nav_host_fragment)
         Log.d("MAINACTIVITY", "-----> Hier ist diese Stelle");
-//        NavigationUI.setupActionBarWithNavController(this, navController)
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return this.findNavController(R.id.nav_host_fragment).navigateUp()
     }
 }
